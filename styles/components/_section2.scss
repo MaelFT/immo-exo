@@ -1,0 +1,37 @@
+.section2 {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	margin: 250px 0 100px;
+
+	div {
+		&:first-child {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			padding: 0 15% 0 20%;
+
+			h4 {
+				font-size: 1.8rem;
+			}
+
+			p {
+				margin-top: 10px;
+				font-size: 1rem;
+				line-height: 30px;
+			}
+
+			button {
+				@include greenButton;
+			}
+		}
+		&:nth-child(2) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			img {
+				width: 75%;
+			}
+		}
+	}
+}

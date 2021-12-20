@@ -1,0 +1,47 @@
+.awards {
+	display: grid;
+	grid-template-columns: 65% 35%;
+
+	div {
+		&:first-child {
+			background: url(../assets/img/office.jpg) center/cover;
+			display: flex;
+			flex-direction: column;
+			justify-content: end;
+
+			ul {
+				display: flex;
+
+				li {
+					border: 2px solid $border-color2;
+					color: $font-color4;
+					padding: 10px;
+					margin: 0 10px 0;
+				}
+			}
+		}
+
+		&:nth-child(2) {
+			background: $bg-color1;
+			color: $font-color1;
+			padding: 50px;
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+
+				li {
+					padding: 20px 0;
+					border-bottom: 1px solid $border-color1;
+				}
+			}
+
+			button {
+				@include greenButton;
+				color: $font-color1;
+			}
+		}
+	}
+}

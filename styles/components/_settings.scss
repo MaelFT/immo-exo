@@ -1,0 +1,58 @@
+// FONTS
+
+@font-face {
+	font-family: "title-font";
+	src: url(../assets/fonts/MerriweatherSans-Bold.ttf);
+}
+@font-face {
+	font-family: "font-1";
+	src: url(../assets/fonts/Poppins-Light.ttf);
+}
+
+$title-font: "title-font", sans-serif;
+$font-1: "font-1", sans-serif;
+
+// COLORS
+
+$font-color1: white;
+$font-color2: black;
+$font-color3: rgb(59, 217, 190);
+$font-color4: rgb(21, 43, 58);
+$font-color5: rgb(169, 184, 193);
+$font-color6: rgb(116, 129, 137);
+
+$border-color1: rgb(128, 230, 213);
+$border-color2: rgb(0, 24, 40);
+$border-color3: rgb(216, 216, 216);
+
+$bg-color1: rgb(0, 205, 170);
+
+$uni-color1: rgb(146, 165, 177);
+
+// MIXIN
+
+@mixin greenButton {
+	border: none;
+	background: none;
+	color: $font-color3;
+	font-size: 1.2rem;
+	margin-top: 20px;
+	width: 100%;
+	text-align: left;
+}
+
+// GLOBAL SETTINGS
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+}
+
+body {
+	font-family: $font-1;
+}
