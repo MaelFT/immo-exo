@@ -1,0 +1,36 @@
+.support {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 200px 300px;
+	border-bottom: 1px solid $border-color3;
+
+	h1 {
+		font-size: 3rem;
+		margin-bottom: 50px;
+	}
+
+	div {
+		display: flex;
+		justify-content: start;
+		align-items: center;
+		width: 100%;
+
+		button {
+			font-size: 1.5rem;
+			background: none;
+			border: none;
+
+			&:nth-child(1) {
+				color: $border-color1;
+				border-bottom: 2px solid $border-color1;
+				margin-right: 30px;
+			}
+			&:nth-child(2) {
+				color: $uni-color1;
+				border-bottom: 2px solid $uni-color1;
+			}
+		}
+	}
+}

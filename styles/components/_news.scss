@@ -1,0 +1,65 @@
+.news {
+	background: $border-color2;
+	color: $font-color1;
+	padding: 150px;
+
+	button {
+		@include greenButton;
+	}
+
+	h4 {
+		font-size: 1.5rem;
+	}
+
+	.news-title {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 20px 0;
+
+		button {
+			width: 11%;
+		}
+	}
+
+	.news-imgs {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		div {
+			width: 350px;
+			height: 500px;
+			display: flex;
+			flex-direction: column;
+			justify-content: end;
+			align-items: end;
+			padding: 40px 20px;
+
+			&:first-child {
+				background: radial-gradient(
+						circle farthest-corner at center center,
+						rgba(0, 0, 0, 0) 0%,
+						rgba(0, 0, 0, 0.3) 100%
+					),
+					url(../assets/img/Lobello-Ryan-1.jpg) center/cover;
+			}
+			&:nth-child(2) {
+				background: radial-gradient(
+						circle farthest-corner at center center,
+						rgba(0, 0, 0, 0) 0%,
+						rgba(0, 0, 0, 0.3) 100%
+					),
+					url(../../assets/img/01.199.12.034.no.rights-crop.jpg)
+						center/cover;
+			}
+			&:last-child {
+				background: radial-gradient(
+						circle farthest-corner at center center,
+						rgba(0, 0, 0, 0) 0%,
+						rgba(0, 0, 0, 0.3) 100%
+					),
+					url(../../assets/img/00.526.11.055.jpg) center/cover;
+			}
+		}
+	}
+}

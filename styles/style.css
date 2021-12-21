@@ -31,7 +31,7 @@ nav {
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
   width: 100%;
-  padding: 75px;
+  padding: 75px 150px;
   color: white;
 }
 
@@ -51,9 +51,24 @@ nav ul {
           align-items: center;
 }
 
+nav ul li {
+  border-bottom: 3px solid transparent;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+nav ul li:hover {
+  cursor: pointer;
+  border-bottom: 3px solid #80e6d5;
+}
+
 nav ul li i {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+
+nav ul li:nth-child(6):hover {
+  border-bottom: 3px solid transparent;
 }
 
 header {
@@ -118,10 +133,23 @@ header div:first-child div p img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .section1 div:first-child img {
   width: 75%;
+}
+
+.section1 div:first-child::after {
+  content: " ";
+  position: absolute;
+  height: 600px;
+  width: 500px;
+  left: 100px;
+  background: url(../../assets/img/office-hp.jpg) center/cover;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  z-index: -5;
 }
 
 .section1 div:nth-child(2) {
@@ -154,8 +182,44 @@ header div:first-child div p img {
   color: #3bd9be;
   font-size: 1.2rem;
   margin-top: 20px;
-  width: 100%;
   text-align: left;
+  position: relative;
+  width: 210px;
+}
+
+.section1 div:nth-child(2) button:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/ -1);
+  left: calc(2px/ -1);
+  background: -webkit-gradient(linear, left top, right top, from(#3bd9be), to(#3bd9be)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #3bd9be), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #3bd9be), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(#3bd9be), to(#3bd9be)), -webkit-gradient(linear, right top, left top, from(#3bd9be), to(#3bd9be));
+  background: linear-gradient(to right, #3bd9be 0%, #3bd9be 100%), linear-gradient(to top, #3bd9be 50%, transparent 50%), linear-gradient(to top, #3bd9be 50%, transparent 50%), linear-gradient(to right, #3bd9be 0%, #3bd9be 100%), linear-gradient(to left, #3bd9be 0%, #3bd9be 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  -webkit-transition: background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -webkit-transform: scaleX(0) rotate(0deg);
+          transform: scaleX(0) rotate(0deg);
+  -webkit-transition-delay: 0.4s, 0.2s, 0s;
+          transition-delay: 0.4s, 0.2s, 0s;
+}
+
+.section1 div:nth-child(2) button:hover {
+  cursor: pointer;
+}
+
+.section1 div:nth-child(2) button:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  -webkit-transform: scaleX(1) rotate(0deg);
+          transform: scaleX(1) rotate(0deg);
+  -webkit-transition-delay: 0s, 0.2s, 0.4s;
+          transition-delay: 0s, 0.2s, 0.4s;
 }
 
 .section2 {
@@ -196,24 +260,71 @@ header div:first-child div p img {
   color: #3bd9be;
   font-size: 1.2rem;
   margin-top: 20px;
-  width: 100%;
   text-align: left;
+  position: relative;
+  width: 440px;
+}
+
+.section2 div:first-child button:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/ -1);
+  left: calc(2px/ -1);
+  background: -webkit-gradient(linear, left top, right top, from(#3bd9be), to(#3bd9be)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #3bd9be), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #3bd9be), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(#3bd9be), to(#3bd9be)), -webkit-gradient(linear, right top, left top, from(#3bd9be), to(#3bd9be));
+  background: linear-gradient(to right, #3bd9be 0%, #3bd9be 100%), linear-gradient(to top, #3bd9be 50%, transparent 50%), linear-gradient(to top, #3bd9be 50%, transparent 50%), linear-gradient(to right, #3bd9be 0%, #3bd9be 100%), linear-gradient(to left, #3bd9be 0%, #3bd9be 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  -webkit-transition: background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -webkit-transform: scaleX(0) rotate(0deg);
+          transform: scaleX(0) rotate(0deg);
+  -webkit-transition-delay: 0.4s, 0.2s, 0s;
+          transition-delay: 0.4s, 0.2s, 0s;
+}
+
+.section2 div:first-child button:hover {
+  cursor: pointer;
+}
+
+.section2 div:first-child button:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  -webkit-transform: scaleX(1) rotate(0deg);
+          transform: scaleX(1) rotate(0deg);
+  -webkit-transition-delay: 0s, 0.2s, 0.4s;
+          transition-delay: 0s, 0.2s, 0.4s;
 }
 
 .section2 div:nth-child(2) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .section2 div:nth-child(2) img {
   width: 75%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  z-index: -5;
+}
+
+.section2 div:nth-child(2)::after {
+  content: " ";
+  position: absolute;
+  height: 375px;
+  width: 600px;
+  right: 100px;
+  top: 50px;
+  background: url(../../assets/img/Sendero-Verde-3.jpg) center/cover;
 }
 
 .section3 {
@@ -228,16 +339,27 @@ header div:first-child div p img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .section3 div:first-child img {
   width: 75%;
+}
+
+.section3 div:first-child::after {
+  content: " ";
+  position: absolute;
+  height: 700px;
+  width: 450px;
+  left: 250px;
+  top: -80px;
+  background: url(../../assets/img/National-September11-Memorial-1.jpg) center/cover;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  z-index: -5;
 }
 
 .section3 div:nth-child(2) {
@@ -251,7 +373,9 @@ header div:first-child div p img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 70%;
+  width: 100%;
+  padding: 0 15%;
+  right: 0px;
 }
 
 .section3 div:nth-child(2) h4 {
@@ -270,15 +394,59 @@ header div:first-child div p img {
   color: #3bd9be;
   font-size: 1.2rem;
   margin-top: 20px;
-  width: 100%;
   text-align: left;
+  position: relative;
+}
+
+.section3 div:nth-child(2) button:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/ -1);
+  left: calc(2px/ -1);
+  background: -webkit-gradient(linear, left top, right top, from(#3bd9be), to(#3bd9be)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #3bd9be), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #3bd9be), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(#3bd9be), to(#3bd9be)), -webkit-gradient(linear, right top, left top, from(#3bd9be), to(#3bd9be));
+  background: linear-gradient(to right, #3bd9be 0%, #3bd9be 100%), linear-gradient(to top, #3bd9be 50%, transparent 50%), linear-gradient(to top, #3bd9be 50%, transparent 50%), linear-gradient(to right, #3bd9be 0%, #3bd9be 100%), linear-gradient(to left, #3bd9be 0%, #3bd9be 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  -webkit-transition: background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -webkit-transform: scaleX(0) rotate(0deg);
+          transform: scaleX(0) rotate(0deg);
+  -webkit-transition-delay: 0.4s, 0.2s, 0s;
+          transition-delay: 0.4s, 0.2s, 0s;
+}
+
+.section3 div:nth-child(2) button:hover {
+  cursor: pointer;
+}
+
+.section3 div:nth-child(2) button:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  -webkit-transform: scaleX(1) rotate(0deg);
+          transform: scaleX(1) rotate(0deg);
+  -webkit-transition-delay: 0s, 0.2s, 0.4s;
+          transition-delay: 0s, 0.2s, 0.4s;
+}
+
+.section3 div:nth-child(2) #first-btn-sec3 {
+  width: 305px;
+}
+
+.section3 div:nth-child(2) #second-btn-sec3 {
+  width: 230px;
 }
 
 .awards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 65% 35%;
-      grid-template-columns: 65% 35%;
+  -ms-grid-columns: 70% 30%;
+      grid-template-columns: 70% 30%;
+  position: relative;
 }
 
 .awards div:first-child {
@@ -293,6 +461,14 @@ header div:first-child div p img {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  padding: 80px 150px;
+  height: 850px;
+}
+
+.awards div:first-child h4 {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: 0 0 20px 10px;
 }
 
 .awards div:first-child ul {
@@ -312,6 +488,16 @@ header div:first-child div p img {
   background: #00cdaa;
   color: white;
   padding: 50px;
+  position: absolute;
+  width: 30%;
+  right: 0;
+  top: -5%;
+  height: 110%;
+}
+
+.awards div:nth-child(2) h4 {
+  font-size: 2rem;
+  font-weight: bolder;
 }
 
 .awards div:nth-child(2) ul {
@@ -331,7 +517,8 @@ header div:first-child div p img {
 }
 
 .awards div:nth-child(2) ul li {
-  padding: 20px 0;
+  padding: 30px 35px 30px 0;
+  line-height: 30px;
   border-bottom: 1px solid #80e6d5;
 }
 
@@ -341,8 +528,276 @@ header div:first-child div p img {
   color: #3bd9be;
   font-size: 1.2rem;
   margin-top: 20px;
-  width: 100%;
   text-align: left;
+  position: relative;
   color: white;
+}
+
+.awards div:nth-child(2) button:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/ -1);
+  left: calc(2px/ -1);
+  background: -webkit-gradient(linear, left top, right top, from(#3bd9be), to(#3bd9be)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #3bd9be), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #3bd9be), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(#3bd9be), to(#3bd9be)), -webkit-gradient(linear, right top, left top, from(#3bd9be), to(#3bd9be));
+  background: linear-gradient(to right, #3bd9be 0%, #3bd9be 100%), linear-gradient(to top, #3bd9be 50%, transparent 50%), linear-gradient(to top, #3bd9be 50%, transparent 50%), linear-gradient(to right, #3bd9be 0%, #3bd9be 100%), linear-gradient(to left, #3bd9be 0%, #3bd9be 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  -webkit-transition: background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -webkit-transform: scaleX(0) rotate(0deg);
+          transform: scaleX(0) rotate(0deg);
+  -webkit-transition-delay: 0.4s, 0.2s, 0s;
+          transition-delay: 0.4s, 0.2s, 0s;
+}
+
+.awards div:nth-child(2) button:hover {
+  cursor: pointer;
+}
+
+.awards div:nth-child(2) button:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  -webkit-transform: scaleX(1) rotate(0deg);
+          transform: scaleX(1) rotate(0deg);
+  -webkit-transition-delay: 0s, 0.2s, 0.4s;
+          transition-delay: 0s, 0.2s, 0.4s;
+}
+
+.news {
+  background: #001828;
+  color: white;
+  padding: 150px;
+}
+
+.news button {
+  border: none;
+  background: none;
+  color: #3bd9be;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  text-align: left;
+  position: relative;
+}
+
+.news button:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  top: calc(2px/ -1);
+  left: calc(2px/ -1);
+  background: -webkit-gradient(linear, left top, right top, from(#3bd9be), to(#3bd9be)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #3bd9be), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, left top, color-stop(50%, #3bd9be), color-stop(50%, transparent)), -webkit-gradient(linear, left top, right top, from(#3bd9be), to(#3bd9be)), -webkit-gradient(linear, right top, left top, from(#3bd9be), to(#3bd9be));
+  background: linear-gradient(to right, #3bd9be 0%, #3bd9be 100%), linear-gradient(to top, #3bd9be 50%, transparent 50%), linear-gradient(to top, #3bd9be 50%, transparent 50%), linear-gradient(to right, #3bd9be 0%, #3bd9be 100%), linear-gradient(to left, #3bd9be 0%, #3bd9be 100%);
+  background-size: 100% 2px, 2px 200%, 2px 200%, 0% 2px, 0% 2px;
+  background-position: 50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+  background-repeat: no-repeat, no-repeat;
+  -webkit-transition: background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, background-position 0.2s ease-in-out, background-size 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  -webkit-transform: scaleX(0) rotate(0deg);
+          transform: scaleX(0) rotate(0deg);
+  -webkit-transition-delay: 0.4s, 0.2s, 0s;
+          transition-delay: 0.4s, 0.2s, 0s;
+}
+
+.news button:hover {
+  cursor: pointer;
+}
+
+.news button:hover:before {
+  background-size: 200% 2px, 2px 400%, 2px 400%, 55% 2px, 55% 2px;
+  background-position: 50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+  -webkit-transform: scaleX(1) rotate(0deg);
+          transform: scaleX(1) rotate(0deg);
+  -webkit-transition-delay: 0s, 0.2s, 0.4s;
+          transition-delay: 0s, 0.2s, 0.4s;
+}
+
+.news h4 {
+  font-size: 1.5rem;
+}
+
+.news .news-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+
+.news .news-title button {
+  width: 11%;
+}
+
+.news .news-imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.news .news-imgs div {
+  width: 350px;
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  padding: 40px 20px;
+}
+
+.news .news-imgs div:first-child {
+  background: radial-gradient(circle farthest-corner at center center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%), url(../assets/img/Lobello-Ryan-1.jpg) center/cover;
+}
+
+.news .news-imgs div:nth-child(2) {
+  background: radial-gradient(circle farthest-corner at center center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%), url(../../assets/img/01.199.12.034.no.rights-crop.jpg) center/cover;
+}
+
+.news .news-imgs div:last-child {
+  background: radial-gradient(circle farthest-corner at center center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%), url(../../assets/img/00.526.11.055.jpg) center/cover;
+}
+
+.support {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 200px 300px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.support h1 {
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+.support div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.support div button {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+}
+
+.support div button:nth-child(1) {
+  color: #80e6d5;
+  border-bottom: 2px solid #80e6d5;
+  margin-right: 30px;
+}
+
+.support div button:nth-child(2) {
+  color: #92a5b1;
+  border-bottom: 2px solid #92a5b1;
+}
+
+footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40% 60%;
+      grid-template-columns: 40% 60%;
+}
+
+footer .footer-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
+  padding: 100px 150px;
+}
+
+footer .footer-title img {
+  margin-bottom: 300px;
+}
+
+footer .footer-title p {
+  color: #92a5b1;
+  font-size: 0.8rem;
+}
+
+footer .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .link div {
+  margin-top: 100px;
+}
+
+footer .link div:nth-child(4) {
+  margin-top: 130px;
+}
+
+footer .link h6 {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+footer .link ul li {
+  color: #92a5b1;
+  font-size: 0.8rem;
+  line-height: 30px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+footer .link ul li:hover {
+  cursor: pointer;
+  color: #3bd9be;
 }
 /*# sourceMappingURL=style.css.map */

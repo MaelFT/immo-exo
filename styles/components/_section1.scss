@@ -8,9 +8,21 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+			position: relative;
 
 			img {
 				width: 75%;
+			}
+
+			&::after {
+				content: " ";
+				position: absolute;
+				height: 600px;
+				width: 500px;
+				left: 100px;
+				background: url(../../assets/img/office-hp.jpg) center/cover;
+				filter: grayscale(100%);
+				z-index: -5;
 			}
 		}
 		&:nth-child(2) {
@@ -31,6 +43,7 @@
 
 			button {
 				@include greenButton;
+				width: 210px;
 			}
 		}
 	}
