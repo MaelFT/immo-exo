@@ -31,7 +31,7 @@ nav {
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
   width: 100%;
-  padding: 75px 150px;
+  padding: 75px 10%;
   color: white;
 }
 
@@ -71,6 +71,12 @@ nav ul li:nth-child(6):hover {
   border-bottom: 3px solid transparent;
 }
 
+@media (max-width: 800px) {
+  nav div:nth-child(2) {
+    display: none;
+  }
+}
+
 header {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, rgba(0, 0, 0, 0.2)), color-stop(90%, rgba(0, 255, 0, 0))), url(../assets/img/01.272.07.005.jpg) center/cover;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 10%, rgba(0, 255, 0, 0) 90%), url(../assets/img/01.272.07.005.jpg) center/cover;
@@ -85,17 +91,18 @@ header div:first-child {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  height: 90vh;
   color: white;
-  margin: 0 150px;
+  margin: 0 auto;
+  width: 80%;
 }
 
 header div:first-child h2 {
   font-weight: 900;
   font-size: 3rem;
-  margin-top: 575px;
 }
 
 header div:first-child div {
@@ -109,10 +116,19 @@ header div:first-child div {
   font-size: 1.2rem;
 }
 
-header div:first-child div p img {
-  color: #80e6d5;
-  margin: 0 10px;
-  font-size: 0.8rem;
+@media (max-width: 1240px) {
+  header div:first-child div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 500px) {
+  header div:first-child h2 {
+    font-size: 1.6rem;
+  }
 }
 
 .section1 {
@@ -121,6 +137,10 @@ header div:first-child div p img {
   -ms-grid-columns: 50% 50%;
       grid-template-columns: 50% 50%;
   margin: 250px 0 150px;
+}
+
+.section1 div {
+  position: relative;
 }
 
 .section1 div:first-child {
@@ -133,23 +153,29 @@ header div:first-child div p img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
 }
 
 .section1 div:first-child img {
-  width: 75%;
+  width: 70%;
+  height: 70%;
 }
 
 .section1 div:first-child::after {
   content: " ";
   position: absolute;
-  height: 600px;
-  width: 500px;
+  height: 160%;
+  width: 60%;
   left: 100px;
-  background: url(../../assets/img/office-hp.jpg) center/cover;
+  background: url(../assets/img/office-hp.jpg) center/cover;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   z-index: -5;
+}
+
+@media (max-width: 1000px) {
+  .section1 div:first-child::after {
+    height: 120%;
+  }
 }
 
 .section1 div:nth-child(2) {
@@ -163,7 +189,7 @@ header div:first-child div p img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 70%;
+  padding: 0 15%;
 }
 
 .section1 div:nth-child(2) h4 {
@@ -220,6 +246,15 @@ header div:first-child div p img {
           transform: scaleX(1) rotate(0deg);
   -webkit-transition-delay: 0s, 0.2s, 0.4s;
           transition-delay: 0s, 0.2s, 0.4s;
+}
+
+@media (max-width: 1000px) {
+  .section1 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
 }
 
 .section2 {
@@ -320,11 +355,20 @@ header div:first-child div p img {
 .section2 div:nth-child(2)::after {
   content: " ";
   position: absolute;
-  height: 375px;
-  width: 600px;
+  height: 100%;
+  width: 80%;
   right: 100px;
   top: 50px;
   background: url(../../assets/img/Sendero-Verde-3.jpg) center/cover;
+}
+
+@media (max-width: 1000px) {
+  .section2 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
 }
 
 .section3 {
@@ -352,9 +396,9 @@ header div:first-child div p img {
 .section3 div:first-child::after {
   content: " ";
   position: absolute;
-  height: 700px;
-  width: 450px;
-  left: 250px;
+  height: 100%;
+  width: 60%;
+  left: 35%;
   top: -80px;
   background: url(../../assets/img/National-September11-Memorial-1.jpg) center/cover;
   -webkit-filter: grayscale(100%);
@@ -441,11 +485,20 @@ header div:first-child div p img {
   width: 230px;
 }
 
+@media (max-width: 1000px) {
+  .section3 {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+}
+
 .awards {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 70% 30%;
-      grid-template-columns: 70% 30%;
+  -ms-grid-columns: 60% 40%;
+      grid-template-columns: 60% 40%;
   position: relative;
 }
 
@@ -484,12 +537,25 @@ header div:first-child div p img {
   margin: 0 10px 0;
 }
 
+@media (max-width: 1000px) {
+  .awards div:first-child {
+    height: 100%;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 700px) {
+  .awards div:first-child {
+    display: none;
+  }
+}
+
 .awards div:nth-child(2) {
   background: #00cdaa;
   color: white;
   padding: 50px;
   position: absolute;
-  width: 30%;
+  width: 40%;
   right: 0;
   top: -5%;
   height: 110%;
@@ -517,7 +583,7 @@ header div:first-child div p img {
 }
 
 .awards div:nth-child(2) ul li {
-  padding: 30px 35px 30px 0;
+  padding: 30px 20px 30px 0;
   line-height: 30px;
   border-bottom: 1px solid #80e6d5;
 }
@@ -568,10 +634,26 @@ header div:first-child div p img {
           transition-delay: 0s, 0.2s, 0.4s;
 }
 
+@media (max-width: 1000px) {
+  .awards div:nth-child(2) {
+    position: static;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 700px) {
+  .awards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .news {
   background: #001828;
   color: white;
-  padding: 150px;
+  padding: 10%;
 }
 
 .news button {
@@ -650,6 +732,7 @@ header div:first-child div p img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 .news .news-imgs div {
@@ -676,11 +759,11 @@ header div:first-child div p img {
 }
 
 .news .news-imgs div:nth-child(2) {
-  background: radial-gradient(circle farthest-corner at center center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%), url(../../assets/img/01.199.12.034.no.rights-crop.jpg) center/cover;
+  background: radial-gradient(circle farthest-corner at center center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%), url(../assets/img/01.199.12.034.no.rights-crop.jpg) center/cover;
 }
 
 .news .news-imgs div:last-child {
-  background: radial-gradient(circle farthest-corner at center center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%), url(../../assets/img/00.526.11.055.jpg) center/cover;
+  background: radial-gradient(circle farthest-corner at center center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%), url(../assets/img/00.526.11.055.jpg) center/cover;
 }
 
 .support {
@@ -697,7 +780,7 @@ header div:first-child div p img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 200px 300px;
+  padding: 200px 20%;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -736,6 +819,23 @@ header div:first-child div p img {
   border-bottom: 2px solid #92a5b1;
 }
 
+.support div button:hover {
+  cursor: pointer;
+  color: #80e6d5;
+  border-bottom: 2px solid #80e6d5;
+}
+
+.support div:hover button:not(:hover) {
+  color: #92a5b1;
+  border-bottom: 2px solid #92a5b1;
+}
+
+@media (max-width: 600px) {
+  .support h1 {
+    font-size: 1.6rem;
+  }
+}
+
 footer {
   display: -ms-grid;
   display: grid;
@@ -754,7 +854,7 @@ footer .footer-title {
   -webkit-box-align: space-between;
       -ms-flex-align: space-between;
           align-items: space-between;
-  padding: 100px 150px;
+  padding: 100px 20%;
 }
 
 footer .footer-title img {
@@ -799,5 +899,38 @@ footer .link ul li {
 footer .link ul li:hover {
   cursor: pointer;
   color: #3bd9be;
+}
+
+@media (max-width: 800px) {
+  footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  footer .footer-title {
+    padding: 20px;
+  }
+  footer .footer-title img {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  footer .link {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 /*# sourceMappingURL=style.css.map */

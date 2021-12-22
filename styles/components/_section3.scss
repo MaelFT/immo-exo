@@ -16,9 +16,9 @@
 			&::after {
 				content: " ";
 				position: absolute;
-				height: 700px;
-				width: 450px;
-				left: 250px;
+				height: 100%;
+				width: 60%;
+				left: 35%;
 				top: -80px;
 				background: url(../../assets/img/National-September11-Memorial-1.jpg)
 					center/cover;
@@ -56,5 +56,10 @@
 				width: 230px;
 			}
 		}
+	}
+
+	@media (max-width: 1000px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
 	}
 }

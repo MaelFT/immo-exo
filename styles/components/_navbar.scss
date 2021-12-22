@@ -5,7 +5,7 @@ nav {
 	display: grid;
 	grid-template-columns: 50% 50%;
 	width: 100%;
-	padding: 75px 150px;
+	padding: 75px 10%;
 	color: $font-color1;
 
 	&:nth-child(1) {
@@ -36,6 +36,14 @@ nav {
 				&:hover {
 					border-bottom: 3px solid transparent;
 				}
+			}
+		}
+	}
+
+	@media (max-width: 800px) {
+		div {
+			&:nth-child(2) {
+				display: none;
 			}
 		}
 	}

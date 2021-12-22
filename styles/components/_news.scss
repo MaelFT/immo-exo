@@ -1,7 +1,7 @@
 .news {
 	background: $border-color2;
 	color: $font-color1;
-	padding: 150px;
+	padding: 10%;
 
 	button {
 		@include greenButton;
@@ -26,6 +26,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		overflow: hidden;
 		div {
 			width: 350px;
 			height: 500px;
@@ -49,7 +50,7 @@
 						rgba(0, 0, 0, 0) 0%,
 						rgba(0, 0, 0, 0.3) 100%
 					),
-					url(../../assets/img/01.199.12.034.no.rights-crop.jpg)
+					url(../assets/img/01.199.12.034.no.rights-crop.jpg)
 						center/cover;
 			}
 			&:last-child {
@@ -58,7 +59,7 @@
 						rgba(0, 0, 0, 0) 0%,
 						rgba(0, 0, 0, 0.3) 100%
 					),
-					url(../../assets/img/00.526.11.055.jpg) center/cover;
+					url(../assets/img/00.526.11.055.jpg) center/cover;
 			}
 		}
 	}

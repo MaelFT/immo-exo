@@ -3,7 +3,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 200px 300px;
+	padding: 200px 20%;
 	border-bottom: 1px solid $border-color3;
 
 	h1 {
@@ -31,6 +31,23 @@
 				color: $uni-color1;
 				border-bottom: 2px solid $uni-color1;
 			}
+
+			&:hover {
+				cursor: pointer;
+				color: $border-color1;
+				border-bottom: 2px solid $border-color1;
+			}
+		}
+
+		&:hover button:not(:hover) {
+			color: $uni-color1;
+			border-bottom: 2px solid $uni-color1;
+		}
+	}
+
+	@media (max-width: 600px) {
+		h1 {
+			font-size: 1.6rem;
 		}
 	}
 }

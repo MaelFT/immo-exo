@@ -39,13 +39,17 @@
 			&::after {
 				content: " ";
 				position: absolute;
-				height: 375px;
-				width: 600px;
+				height: 100%;
+				width: 80%;
 				right: 100px;
 				top: 50px;
 				background: url(../../assets/img/Sendero-Verde-3.jpg)
 					center/cover;
 			}
 		}
+	}
+	@media (max-width: 1000px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 1fr;
 	}
 }

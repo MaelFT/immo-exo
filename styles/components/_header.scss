@@ -10,15 +10,16 @@ header {
 	div:first-child {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: end;
+		height: 90vh;
 
 		color: $font-color1;
-		margin: 0 150px;
+		margin: 0 auto;
+		width: 80%;
 
 		h2 {
 			font-weight: 900;
 			font-size: 3rem;
-			margin-top: 575px;
 		}
 
 		div {
@@ -26,13 +27,16 @@ header {
 			justify-content: space-between;
 			margin-top: 30px;
 			font-size: 1.2rem;
+		}
 
-			p {
-				img {
-					color: $border-color1;
-					margin: 0 10px;
-					font-size: 0.8rem;
-				}
+		@media (max-width: 1240px) {
+			div {
+				flex-direction: column;
+			}
+		}
+		@media (max-width: 500px) {
+			h2 {
+				font-size: 1.6rem;
 			}
 		}
 	}
